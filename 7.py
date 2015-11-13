@@ -5,6 +5,7 @@ n = 150000
 while(True):
     if i not in composites:
         index += 1
+        print index, i
         if index == 10001:
             print i
             break

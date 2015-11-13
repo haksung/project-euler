@@ -1,17 +1,11 @@
-composites = []
-prime = []
-i = 2
-n = 600851475143
-num = math.sqrt(n)
+num = 600851475143
+prime = 3
+n = num
 
-while(i <= num):
-    if i not in composites:
-        if n % i == 0:
-            prime.append(i)
-        j = i
-        while(j <= num/i):
-            composites.append(i*j)
-            j += 1
-    i += 1
+while prime < n:
+    if n % prime == 0:
+        n = n/prime
+    else:
+        prime += 2
 
-print prime[len(prime)-1]
+print n
